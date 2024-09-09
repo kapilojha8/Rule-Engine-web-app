@@ -1,0 +1,115 @@
+{% extends "ComponentPages/pageWrapper.html" %}
+
+{% block jsTablueLink %}
+    <script type='module' src="{{tablue_server_js}}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="main_section">
+
+        <div class="form_header">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}">
+        </div>
+        <div class="form_box d-flex">
+            <form action="/submit-form" method="POST">
+                <div class="form-group">
+                    <label for="amount_financed">Loan Amount</label>
+                    <input type="text" id="amount_financed" name="amount_financed">
+                </div>
+
+                <div class="form-group">
+                    <label for="deposit_amount">Deposit Amount</label>
+                    <input type="number" id="deposit_amount" name="deposit_amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="balloon_amount">Balloon Amount</label>
+                    <input type="number" id="balloon_amount" name="balloon_amount">
+                </div>
+
+                <div class="form-group">
+                    <label for="repayment_term_month">Repayment Term (Months)</label>
+                    <select>
+                      <option>84</option>
+                      <option>83</option>
+                      <option>82</option>
+                      <option>81</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="applicant_entity_type">Applicant Entity Type</label>
+                    <input type="text" id="applicant_entity_type" name="applicant_entity_type">
+                </div>
+
+                <div class="form-group">
+                    <label for="asset_supplier_type">Asset Supplier Type</label>
+                    <input type="text" id="asset_supplier_type" name="asset_supplier_type">
+                </div>
+
+                <div class="form-group">
+                    <label for="asset_category">Asset Category</label>
+                    <select>
+                        <option>Primary</option>
+                        <option>Secondary</option>
+                        <option>Tertiory</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="asset_type">Asset Type</label>
+                    <select> 
+                      <option>Car</option>
+                      <option>Aeroplane</option>
+                      <option>Bus</option>
+                    </select>
+                     
+                </div>
+
+                <div class="form-group">
+                    <label for="asset_manufacture_year">Asset Manufacture Year</label>
+                    <select>
+                      <option>2024</option>
+                      <option>2023</option>
+                      <option>2022</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="usage_type">Ussed Asset</label>
+                    <select>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="gst_registered_date">GST Registered Date</label>
+                    <input type="date" id="gst_registered_date" name="gst_registered_date">
+                </div>
+
+                <div class="form-group">
+                    <label for="abn_registered_date">ABN Registered Date</label>
+                    <input type="date" id="abn_registered_date" name="abn_registered_date">
+                </div>
+
+                <div class="form-group">
+                    <label for="guarantor_1_residential_status">Guarantor 1 Residential Status</label>
+                    <select>
+                        <option>Owner</option>
+                        <option>Renting</option>
+
+                    </select>
+                </div>
+                <div class="form-group w-100">
+                    <button class="submit_btn">Submit</button>
+                </div>
+            </form>
+            <div class="right">
+                <div class="right_inner">
+                    <h1>Quest</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  {% endblock %}
