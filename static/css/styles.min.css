@@ -73,10 +73,11 @@ input[type="number"] {
     display: flex;
     flex-wrap: wrap;
     gap: .7rem;
+    width: 100%;
 }
 
 .form_box form .form-group {
-    width: calc(50% - .5rem);
+    width: calc(33.33% - .5rem);
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
@@ -87,18 +88,16 @@ input[type="number"] {
     background: #fff;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    flex-wrap: wrap;
 }
 
-.form_box.d-flex>div,
-.form_box.d-flex form {
-    width: 50%;
-}
+
 
 .form_header img {
     width: 150px;
 }
 
-.form_box button {
+.form_box button.submit_btn {
     background-color: #eb3359;
     border: 2px solid #eb3359;
     color: #fff;

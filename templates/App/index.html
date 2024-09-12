@@ -11,7 +11,7 @@
             <img src="{{ url_for('static', filename='images/logo.svg') }}">
         </div>
         <div class="form_box d-flex">
-            <form action="/submit-form" method="POST">
+            <form id="loan-form" action="/submit-form" method="POST">
                 <div class="form-group">
                     <label for="amount_financed">Loan Amount</label>
                     <input type="text" id="amount_financed" name="amount_financed">
@@ -29,46 +29,48 @@
 
                 <div class="form-group">
                     <label for="repayment_term_month">Repayment Term (Months)</label>
-                    <select>
-                      <option>84</option>
-                      <option>83</option>
-                      <option>82</option>
-                      <option>81</option>
+                    <select id="repayment_term_month" name="repayment_term_month">
+                    
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="applicant_entity_type">Applicant Entity Type</label>
-                    <input type="text" id="applicant_entity_type" name="applicant_entity_type">
+                    <select id="applicant_entity_type" name="applicant_entity_type">
+                        <option>TRUSTS</option>
+                        <option>SOLE_TRADER</option>
+                        <option>COMPANY</option>
+                        <option>PARTNERSHIP</option>
+                      </select>
                 </div>
 
                 <div class="form-group">
                     <label for="asset_supplier_type">Asset Supplier Type</label>
-                    <input type="text" id="asset_supplier_type" name="asset_supplier_type">
+                    <select id="asset_supplier_type" name="asset_supplier_type">
+                        <option>DEALER</option>
+                        <option>PRIVATE</option>
+                      </select>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="asset_category">Asset Category</label>
-                    <select>
-                        <option>Primary</option>
-                        <option>Secondary</option>
-                        <option>Tertiory</option>
+                    <select id="asset_category" name="asset_category">
+                        <option value="">--Select Category--</option>
+                        <option value="Primary">Primary</option>
+                        <option value="Secondary">Secondary</option>
+                        <option value="Tertiory">Tertiory</option>
                     </select>
-                </div>
-
+                </div> -->
+                
                 <div class="form-group">
                     <label for="asset_type">Asset Type</label>
-                    <select> 
-                      <option>Car</option>
-                      <option>Aeroplane</option>
-                      <option>Bus</option>
+                    <select id="asset_type" name="asset_type">
+                        <option value="">--Select Type--</option>
                     </select>
-                     
                 </div>
-
                 <div class="form-group">
                     <label for="asset_manufacture_year">Asset Manufacture Year</label>
-                    <select>
+                    <select id="asset_manufacture_year" name="asset_manufacture_year">
                       <option>2024</option>
                       <option>2023</option>
                       <option>2022</option>
@@ -77,7 +79,7 @@
 
                 <div class="form-group">
                     <label for="usage_type">Ussed Asset</label>
-                    <select>
+                    <select id="usage_type" name="usage_type">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
@@ -94,10 +96,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="guarantor_1_residential_status">Guarantor 1 Residential Status</label>
-                    <select>
-                        <option>Owner</option>
-                        <option>Renting</option>
+                    <label for="guarantor_1_residential_status" >Guarantor 1 Residential Status</label>
+                    <select name="guarantor_1_residential_status">
+                        <option value="OWNING">OWNING</option>
+                        <option value="RENTING">RENTING</option>
 
                     </select>
                 </div>
@@ -105,11 +107,51 @@
                     <button class="submit_btn">Submit</button>
                 </div>
             </form>
-            <div class="right">
-                <div class="right_inner">
-                    <h1>Quest</h1>
-                </div>
+            <div class="right w-100 mt-4">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="right_inner">
+                                <h1>Quest</h1>
+                                <div id="result-content"></div> <!-- Result will be shown here -->
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+               
             </div>
         </div>
+       
     </div>
   {% endblock %}
