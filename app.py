@@ -174,37 +174,52 @@ def Onsubmit():
     
 
     Result_Evalulated = {"Pass":[],"Fail":[]}
-    
     for Data_rule in Data_of_Rule_test:
-        
+        TempDict = {"Flexi":{},'Pepper':{},"Resimac":{}}
         for LenderName,LenderRule in Rules_by_Lender.lender_rules.items():
             
-            if LenderName.upper().find(Data_rule['asset_category'].split("_")[0].upper()) == -1:
+            # print("The Lender Name is :",LenderName)
+            if LenderName.upper().find(Data_rule['asset_category'].split("_")[0]) == -1:
                 continue
-            print("Hello")
+            
+            if "Pepper" in LenderName:
+                lender = 'Pepper'
+                TempDict[lender][LenderName] = {}
+            elif "Resimac" in LenderName:
+                lender = 'Resimac'
+                TempDict[lender][LenderName] = {}
+            else :
+                lender = 'Flexi'
+                TempDict[lender][LenderName] = {}
+
             temppte = copy.deepcopy(LenderRule)
             remarks = ""
             Running_logs = ""
             while temppte!=None:
-                
                 Rule_evaluate = temppte.Rule.evaluate(Data_rule)
                 Running_logs = Running_logs + " -- " + Rule_evaluate['Remark']  if Running_logs!="" else Rule_evaluate['Remark']
+                # TempDict[LenderName] = {temppte.RC_ID:}
+                TempDict[lender][LenderName][ temppte.RC_ID] = {}
                 EATD = temppte.take_decisions(temppte.Rule)
+                TempDict[lender][LenderName][temppte.RC_ID]["RC_Result"] = Rule_evaluate['Return_result']   # Rule Condition Result
+                TempDict[lender][LenderName][temppte.RC_ID]["Remark"] = Rule_evaluate['Remark']
                 if not EATD :
                     break
-                # if type(temppte.Rule.Remark) == int:
-                #     remarks +=  Remarks[f'{temppte.Rule.Remark}']
+                if type(temppte.Rule.Remark) == int:
+                    remarks +=  Remarks[f'{temppte.Rule.Remark}']
                 temppte = temppte.next_Rule
-
-            
+    
             if temppte == None:
+                TempDict[lender][LenderName]['Eligibility'] = True
                 LName = LenderName
                 application_number = Data_rule['application_number']
                 result = " Eligible"
                 Result_Evalulated["Pass"].append([application_number,LName,result])
                 Data_rule['Evaluated_Lender'] = LenderName
                 print("This is tempte running Logs ",Running_logs)
+            
             else:
+                TempDict[lender][LenderName]['Eligibility'] = False
                 LName = LenderName
                 application_number = Data_rule['application_number']
                 result = " Not Eligible"
@@ -213,7 +228,15 @@ def Onsubmit():
                 Result_Evalulated["Fail"].append([application_number,LName,result,result_remark])
                 Data_rule['Evaluated_Lender'] = "No Lender Found!"
                 print("This is tempte running Logs ",Running_logs)
+ 
+
+            
+    for lender,lendername in TempDict.items():
+        print("---->",lender)
+        for i,j in lendername.items():
+            print("---->",i)
+            print(j)
 
     
-    return jsonify(Result_Evalulated)
+    return jsonify(TempDict)
     exit()
