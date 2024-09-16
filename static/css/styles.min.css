@@ -111,7 +111,50 @@ input[type="number"] {
 
 .form_box form .form-group.w-100 {
     width: 100%;
+
 }
+
 .form_box .right {
    padding-left: 16px;
 }
+.submit_btn{
+    margin: auto;
+}
+.text-right{
+    text-align: right;
+}
+.tick {
+    background: #05dd80;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    box-shadow: 1px 1px 1px #004b2b;
+  }
+  .cross {
+    background: #eb3359;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 21px;
+    box-shadow: 1px 1px 1px #004b2b;
+  }
+  .accordion-button:not(.collapsed){
+    color: #212529;
+  }
+  table{
+    table-layout: fixed;
+  }
+  table th{
+    background: #f6f6f6 !important;
+  }
+  body .accordion-button:focus{
+    box-shadow: none;
+    border:none
+  }

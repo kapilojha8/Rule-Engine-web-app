@@ -15,16 +15,19 @@
                 <div class="form-group">
                     <label for="amount_financed">Loan Amount</label>
                     <input type="text" id="amount_financed" name="amount_financed">
+                    <h6 id="amount_financed_check" ></h6><br>
                 </div>
 
                 <div class="form-group">
                     <label for="deposit_amount">Deposit Amount</label>
                     <input type="number" id="deposit_amount" name="deposit_amount">
+                    <h6 id="deposit_amount_check" ></h6><br>
                 </div>
 
                 <div class="form-group">
                     <label for="balloon_amount">Balloon Amount</label>
                     <input type="number" id="balloon_amount" name="balloon_amount">
+                    <h6 id="balloon_amount_check" ></h6><br>
                 </div>
 
                 <div class="form-group">
@@ -37,18 +40,18 @@
                 <div class="form-group">
                     <label for="applicant_entity_type">Applicant Entity Type</label>
                     <select id="applicant_entity_type" name="applicant_entity_type">
-                        <option>TRUSTS</option>
-                        <option>SOLE_TRADER</option>
-                        <option>COMPANY</option>
-                        <option>PARTNERSHIP</option>
+                        <option value="TRUSTS">TRUSTS</option>
+                        <option value="SOLE_TRADER" >SOLE TRADER</option>
+                        <option value="COMPANY">COMPANY</option>
+                        <option value="PARTNERSHIP">PARTNERSHIP</option>
                       </select>
                 </div>
 
                 <div class="form-group">
                     <label for="asset_supplier_type">Asset Supplier Type</label>
                     <select id="asset_supplier_type" name="asset_supplier_type">
-                        <option>DEALER</option>
-                        <option>PRIVATE</option>
+                        <option value="DEALER">DEALER</option>
+                        <option value="PRIVATE">PRIVATE</option>
                       </select>
                 </div>
 
@@ -71,14 +74,12 @@
                 <div class="form-group">
                     <label for="asset_manufacture_year">Asset Manufacture Year</label>
                     <select id="asset_manufacture_year" name="asset_manufacture_year">
-                      <option>2024</option>
-                      <option>2023</option>
-                      <option>2022</option>
+
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="usage_type">Ussed Asset</label>
+                    <label for="usage_type">Used Asset</label>
                     <select id="usage_type" name="usage_type">
                         <option  value="USED">Yes</option>
                         <option value="NEW">No</option>
@@ -104,7 +105,7 @@
                     </select>
                 </div>
                 <div class="form-group w-100">
-                    <button class="submit_btn">Submit</button>
+                    <button class="submit_btn">Match Lenders</button>
                 </div>
             </form>
             <div class="right w-100 mt-4">
@@ -124,33 +125,7 @@
                         </div>
                       </div>
                     </div> -->
-                    <!-- <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                          Accordion Item #2
-                        </button>
-                      </h2>
-                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <div class="right_inner">
-                            <h1>Quest</h1>
-                            <div id="result-content2"></div> 
-                        </div>
-                        </div>
-                      </div>
-                    </div> -->
-                    <!-- <div class="accordion-item">
-                      <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                          Accordion Item #3
-                        </button>
-                      </h2>
-                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                        </div>
-                      </div>
-                    </div> -->
+                 
                   </div>
                
             </div>
