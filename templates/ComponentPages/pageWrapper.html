@@ -73,7 +73,7 @@
 
           
                       
-                      const assetTypes = data.Asset_Type.split(", ");
+                    const assetTypes = [...new Set(data.Asset_Type.split(", ").sort())];
                       
                       // Populate the Asset Type dropdown
                       assetTypes.forEach(function(assetType) {
@@ -186,7 +186,7 @@
                             }
                         })
                             
-                        const headers = ['asset_type','ABN_in_Months','GST_in_Months','amount_financed','applicant_entity_type','MAX_TERM','asset_supplier_type','Max_loan_non_proprty_owners','usage_type','Max_age_of_asset_at_end_of_term','Deposit_for_non_proprty_owner-Primay_assets'];
+                        const headers = ['Asset Type','ABN Registration','GST Registration','Loan Amount','Applicant Entity Type','Repayment Term','Asset Supplier Type','Max Loan for Non Property Owners','Used Asset','Max Age of Asset','Deposit for non-property owner'];
                         // Construct table HTML for Pass and Fail results
                          tableHtml += `
                         <div class="accordion-item">

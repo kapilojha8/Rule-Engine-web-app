@@ -58,10 +58,9 @@ class PreprocessingOfData:
 
         self.Client_data['deposit_amount'] = pd.to_numeric(self.Client_data['deposit_amount'], errors='coerce')
         self.Client_data['amount_financed'] = pd.to_numeric(self.Client_data['amount_financed'], errors='coerce')
-        self.Client_data["Deposit_Amount_percentage"] = (self.Client_data['deposit_amount'].fillna(0) / self.Client_data['amount_financed']) * 100  
+        self.Client_data["Deposit_Amount_percentage"] = (self.Client_data['deposit_amount'].fillna(0) / self.Client_data['amount_financed'])
     
-    
-    def create_abn_gst_dates(self, current_year=datetime.now().year, current_date=pd.to_datetime(datetime.now().strftime('%d-%m-%Y'))):
+    def create_abn_gst_dates(self, current_year=datetime.now().year, current_date=pd.to_datetime(datetime.now().strftime('%d-%m-%Y'), dayfirst=True)):
         """
         Calculates asset age and the number of months for GST and ABN registration.
 
