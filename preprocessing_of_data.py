@@ -4,7 +4,7 @@ import os
 import json
 
 class PreprocessingOfData:
-    def __init__(self, ClientData) -> None:
+    def __init__(self, ClientData:dict) -> None:
         """
         Initializes the PreprocessingOfData class by loading data and setting up necessary fields.
         
@@ -13,7 +13,7 @@ class PreprocessingOfData:
         """
         
         self.Client_data = pd.DataFrame(ClientData,columns=ClientData.keys())
-       
+  
         # Initialize Data_of_Rule_test to None
         self.Data_of_Rule_test = None
         # Create ABN and GST dates, calculate Asset age
@@ -22,8 +22,6 @@ class PreprocessingOfData:
             self.create_asset_categories()
             self.create_asset_classification()
             self.create_Deposit_Amount_Percentage()
-            
-            print(self.Client_data.to_dict('records'))
     
     def create_asset_categories(self):
         with open('static/data.json', 'r') as file:
