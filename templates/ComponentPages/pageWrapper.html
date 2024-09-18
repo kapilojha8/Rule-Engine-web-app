@@ -160,10 +160,15 @@
             alert("Please enter a valid Amounts between 1 and 1,000,000.");
             return; // Stop form submission if the value is invalid
         }
+
             // Serialize form data
             var formData = $(this).serialize();
-
+            $('#loader').show()
             // Send form data using AJAX
+
+            setTimeout(function(){
+
+           
             $.ajax({
                 url: '/submit-form',
                 type: 'POST',
@@ -174,7 +179,7 @@
                     var tableHtml = ` `;
                     var collap = "collapsed"
                     var aria_expanded = "true"
-                    
+                    $('#loader').hide()
                     lenderNames.forEach(lendername=>{
                         var lenders = Object.keys(response[lendername])
                         lendercolor = "#eb3359"
@@ -305,6 +310,8 @@
                     console.error('Error:', error);
                 }
             });
+        
+        },1000);
         });
     });
 </script>
