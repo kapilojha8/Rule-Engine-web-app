@@ -76,13 +76,14 @@ class PreprocessingOfData:
         try:
             # Ensure the 'asset_manufacture_year' column is numeric
             self.Client_data['asset_manufacture_year'] = pd.to_numeric(self.Client_data['asset_manufacture_year'], errors='coerce')
-
+            self.Client_data['repayment_term_month'] = pd.to_numeric(self.Client_data['repayment_term_month'], errors='coerce')
             # Check for any NaN values after conversion
             if self.Client_data['asset_manufacture_year'].isnull().any():
                 raise ValueError("Invalid or missing values in 'asset_manufacture_year' column.")
-
+ 
             # Calculate the asset age based on the current year and asset manufacture year
             self.Client_data['Asset_age'] = current_year - self.Client_data['asset_manufacture_year']
+            self.Client_data["Asset_age_at_end_of_term"] = self.Client_data["Asset_age"] + self.Client_data['repayment_term_month']/12
             
 
             # Convert GST and ABN registration dates from string to datetime format

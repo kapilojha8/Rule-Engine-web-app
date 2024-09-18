@@ -102,86 +102,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Rule_Operator": "<",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Reference_field": "Asset_age",
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -240,7 +198,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
@@ -252,7 +210,7 @@
           "Condition_to_proceed": false,
           "Remark": "The asset age does not meet the required age criteria.",
           "Exception_rule": {
-            "Reference_field": "Asset_age",
+            "Reference_field": "Asset_age_at_end_of_term",
             "Rule_Operator": "<=",
             "Rule_Value": 30,
             "Field_Type": 3,
@@ -436,86 +394,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Rule_Operator": "<",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Reference_field": "Asset_age",
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -529,7 +445,6 @@
           "Remark": "The borrower can buy the assets privately."
         },
         "Flow_Exception_for_False": {
-
           "Condition_to_proceed": true,
           "Remark": "The borrower can buy assets from dealer."
         }
@@ -575,7 +490,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
@@ -587,7 +502,7 @@
           "Condition_to_proceed": false,
           "Remark": "The asset age does not meet the required age criteria.",
           "Exception_rule": {
-            "Reference_field": "Asset_age",
+            "Reference_field": "Asset_age_at_end_of_term",
             "Rule_Operator": "<=",
             "Rule_Value": 30,
             "Field_Type": 3,
@@ -771,86 +686,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Reference_field": "Asset_age",
-                    "Rule_Operator": "<",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -909,7 +782,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
@@ -921,7 +794,7 @@
           "Condition_to_proceed": false,
           "Remark": "The asset age does not meet the required age criteria.",
           "Exception_rule": {
-            "Reference_field": "Asset_age",
+            "Reference_field": "Asset_age_at_end_of_term",
             "Rule_Operator": "<=",
             "Rule_Value": 30,
             "Field_Type": 3,
@@ -1093,82 +966,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Reference_field": "repayment_term_month",
-          "Rule_Operator": "<=",
-          "Rule_Value": 84,
-          "Field_Type": 3,
-          "Flow_Exception_for_True": {
-            "Condition_to_proceed": true,
-            "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-            "Exception_rule": {
-              "Reference_field": "usage_type",
-              "Rule_Operator": "==",
-              "Rule_Value": "NEW",
-              "Field_Type": 4,
-              "Flow_Exception_for_True": {
-                "Condition_to_proceed": true,
-                "Remark": "The new asset meets the age requirement for its class."
-              },
-              "Flow_Exception_for_False": {
-                "Condition_to_proceed": false,
-                "Remark": "The asset is used, now checking the age of the asset within its class.",
-                "Exception_rule": {
-                  "Reference_field": "Asset_age",
-                  "Rule_Operator": "<",
-                  "Rule_Value": 3,
-                  "Field_Type": 3,
-                  "Flow_Exception_for_True": {
-                    "Condition_to_proceed": true,
-                    "Remark": "The asset meets the age requirement for its class."
-                  },
-                  "Flow_Exception_for_False": {
-                    "Condition_to_proceed": false,
-                    "Remark": "The asset does not meet the age requirement for its class."
-                  }
-                }
-              }
-            }
-          },
-          "Flow_Exception_for_False": {
-            "Condition_to_proceed": false,
-            "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 84,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -1362,86 +1197,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Rule_Operator": "<",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Reference_field": "Asset_age",
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -1635,82 +1428,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Reference_field": "repayment_term_month",
-          "Rule_Operator": "<=",
-          "Rule_Value": 84,
-          "Field_Type": 3,
-          "Flow_Exception_for_True": {
-            "Condition_to_proceed": true,
-            "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-            "Exception_rule": {
-              "Reference_field": "usage_type",
-              "Rule_Operator": "==",
-              "Rule_Value": "NEW",
-              "Field_Type": 4,
-              "Flow_Exception_for_True": {
-                "Condition_to_proceed": true,
-                "Remark": "The new asset meets the age requirement for its class."
-              },
-              "Flow_Exception_for_False": {
-                "Condition_to_proceed": false,
-                "Remark": "The asset is used, now checking the age of the asset within its class.",
-                "Exception_rule": {
-                  "Rule_Operator": "<",
-                  "Rule_Value": 3,
-                  "Field_Type": 3,
-                  "Reference_field": "Asset_age",
-                  "Flow_Exception_for_True": {
-                    "Condition_to_proceed": true,
-                    "Remark": "The asset meets the age requirement for its class."
-                  },
-                  "Flow_Exception_for_False": {
-                    "Condition_to_proceed": false,
-                    "Remark": "The asset does not meet the age requirement for its class."
-                  }
-                }
-              }
-            }
-          },
-          "Flow_Exception_for_False": {
-            "Condition_to_proceed": false,
-            "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 84,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -1916,82 +1671,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Reference_field": "repayment_term_month",
-          "Rule_Operator": "<=",
-          "Rule_Value": 84,
-          "Field_Type": 3,
-          "Flow_Exception_for_True": {
-            "Condition_to_proceed": true,
-            "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-            "Exception_rule": {
-              "Reference_field": "usage_type",
-              "Rule_Operator": "==",
-              "Rule_Value": "NEW",
-              "Field_Type": 4,
-              "Flow_Exception_for_True": {
-                "Condition_to_proceed": true,
-                "Remark": "The new asset meets the age requirement for its class."
-              },
-              "Flow_Exception_for_False": {
-                "Condition_to_proceed": false,
-                "Remark": "The asset is used, now checking the age of the asset within its class.",
-                "Exception_rule": {
-                  "Rule_Operator": "<",
-                  "Rule_Value": 3,
-                  "Field_Type": 3,
-                  "Reference_field": "Asset_age",
-                  "Flow_Exception_for_True": {
-                    "Condition_to_proceed": true,
-                    "Remark": "The asset meets the age requirement for its class."
-                  },
-                  "Flow_Exception_for_False": {
-                    "Condition_to_proceed": false,
-                    "Remark": "The asset does not meet the age requirement for its class."
-                  }
-                }
-              }
-            }
-          },
-          "Flow_Exception_for_False": {
-            "Condition_to_proceed": false,
-            "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 84,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -2041,11 +1758,11 @@
             "Field_Type": 3,
             "Reference_field": "amount_financed",
             "Flow_Exception_for_True": {
-              "Condition_to_proceed":true,
+              "Condition_to_proceed": true,
               "Remark": "The requested loan limit meets the borrower's property criteria for the relevant asset categories."
             },
             "Flow_Exception_for_False": {
-              "Condition_to_proceed":false,
+              "Condition_to_proceed": false,
               "Remark": "The requested loan limit does not meet the borrower's property criteria for the relevant asset categories."
             }
           }
@@ -2213,86 +1930,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Rule_Operator": "<",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Reference_field": "Asset_age",
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -2440,11 +2115,11 @@
             "Rule_Value": "Scaffolding, Photocopiers",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
-              "Condition_to_proceed":true,
+              "Condition_to_proceed": true,
               "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment."
             },
             "Flow_Exception_for_False": {
-              "Condition_to_proceed":false,
+              "Condition_to_proceed": false,
               "Remark": "The asset qualifies in excluded asset categories and will not be considered for further assessment."
             }
           }
@@ -2514,86 +2189,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "Asset_age",
+        "Rule_Operator": ">=",
+        "Rule_Value": 3,
         "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-          "Exception_rule": {
-            "Reference_field": "usage_type",
-            "Rule_Operator": "==",
-            "Rule_Value": "NEW",
-            "Field_Type": 4,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The new asset meets the age requirement for its class."
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The asset is used, now checking the age of the asset within its class.",
-              "Exception_rule": {
-                "Reference_field": "Asset_age",
-                "Rule_Operator": ">=",
-                "Rule_Value": 3,
-                "Field_Type": 3,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset does not meet the age requirement for its class."
-                }
-              }
-            }
-          }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset.",
-              "Exception_rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4,
-                "Flow_Exception_for_True": {
-                  "Condition_to_proceed": true,
-                  "Remark": "The new asset meets the age requirement for its class."
-                },
-                "Flow_Exception_for_False": {
-                  "Condition_to_proceed": false,
-                  "Remark": "The asset is used, now checking the age of the asset within its class.",
-                  "Exception_rule": {
-                    "Rule_Operator": "<=",
-                    "Rule_Value": 3,
-                    "Field_Type": 3,
-                    "Reference_field": "Asset_age",
-                    "Flow_Exception_for_True": {
-                      "Condition_to_proceed": true,
-                      "Remark": "The asset meets the age requirement for its class."
-                    },
-                    "Flow_Exception_for_False": {
-                      "Condition_to_proceed": false,
-                      "Remark": "The asset does not meet the age requirement for its class."
-                    }
-                  }
-                }
-              }
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -2722,8 +2355,6 @@
         }
       }
     },
-
-
     "Primary Pepper_Tier_A": {
       "Asset Type": {
         "Reference_field": "asset_type",
@@ -2905,44 +2536,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": ">",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Reference_field": "repayment_term_month",
-            "logical_operator": "and",
-            "Logical_Rule": {
-              "Rule_Operator": "==",
-              "Rule_Value": 0,
-              "Field_Type": 3,
-              "Reference_field": "balloon_amount"
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-            },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -3013,7 +2644,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 15,
         "Field_Type": 3,
@@ -3216,8 +2847,6 @@
                         "Rule_Operator": "<=",
                         "Rule_Value": 55000,
                         "Field_Type": 3,
-                
-                        
                         "Flow_Exception_for_True": {
                           "Remark": "The loan limit meets the criteria for the relevant asset categories"
                         },
@@ -3240,7 +2869,7 @@
                             "Reference_field": "amount_financed",
                             "Rule_Operator": "<=",
                             "Rule_Value": 50000,
-                            "Field_Type": 3,                            
+                            "Field_Type": 3,
                             "Flow_Exception_for_True": {
                               "Remark": "The loan limit meets the criteria for the relevant asset categories"
                             },
@@ -3280,44 +2909,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": ">",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Reference_field": "repayment_term_month",
-            "logical_operator": "and",
-            "Logical_Rule": {
-              "Rule_Operator": "==",
-              "Rule_Value": 0,
-              "Field_Type": 3,
-              "Reference_field": "balloon_amount"
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-            },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -3388,7 +3017,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 15,
         "Field_Type": 3,
@@ -3563,44 +3192,44 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": ">",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
-            "Reference_field": "repayment_term_month",
-            "logical_operator": "and",
-            "Logical_Rule": {
-              "Rule_Operator": "==",
-              "Rule_Value": 0,
-              "Field_Type": 3,
-              "Reference_field": "balloon_amount"
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-            },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
-            }
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }  
           }
         }
       },
@@ -3671,7 +3300,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 15,
         "Field_Type": 3,
@@ -3834,24 +3463,31 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": ">",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class."
         }
       },
       "Asset Supplier Type": {
@@ -3907,7 +3543,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 15,
         "Field_Type": 3,
@@ -4070,24 +3706,31 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": ">",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class."
         }
       },
       "Asset Supplier Type": {
@@ -4143,7 +3786,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 15,
         "Field_Type": 3,
@@ -4293,7 +3936,7 @@
       },
       "Applicant Entity Type": {
         "Reference_field": "applicant_entity_type",
-        "Rule_Operator": "in",  
+        "Rule_Operator": "in",
         "Rule_Value": "Sole traders, Companies, COMPANY, Trusts, TRUST, Partnerships, SOLE_TRADER,  PARTNERSHIP",
         "Field_Type": 4,
         "Flow_Exception_for_True": {
@@ -4306,24 +3949,31 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": "==",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class."
         }
       },
       "Asset Supplier Type": {
@@ -4381,7 +4031,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 8,
         "Field_Type": 3,
@@ -4544,24 +4194,31 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
+        "Reference_field": "balloon_amount",
+        "Rule_Operator": ">",
+        "Rule_Value": 0,
         "Field_Type": 3,
-        "logical_operator": "and",
-        "Logical_Rule": {
-          "Reference_field": "balloon_amount",
-          "Rule_Operator": "==",
-          "Rule_Value": 0,
-          "Field_Type": 3
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the balloon amount requirement for its class.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
         },
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
-        },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset."
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the balloon amount requirement for its class."
         }
       },
       "Asset Supplier Type": {
@@ -4619,7 +4276,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 8,
         "Field_Type": 3,
@@ -4703,8 +4360,6 @@
         }
       }
     },
-
-
     "Primary Resimac- low doc": {
       "Asset Type": {
         "Reference_field": "asset_type",
@@ -4822,46 +4477,58 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
-        "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
+        "Reference_field": "asset_type",
+        "Rule_Operator": "==",
+        "Rule_Value": "EVs",
+        "Field_Type": 4,
+          "logical_operator": "and",
+          "Logical_Rule": {
+            "Reference_field": "usage_type",
+            "Rule_Operator": "==",
+            "Rule_Value": "NEW",
+            "Field_Type": 4
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the type and usage for the relevant asset categories.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
+        },
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the type and usage for its relevant asset categories.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
-            "logical_operator": "and",
-            "Logical_Rule": {
-              "Rule_Operator": "==",
-              "Rule_Value": "EV",
-              "Field_Type": 4,
-              "Reference_field": "asset_type",
-              "logical_operator": "and",
-              "Logical_Rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4
-              }
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset. "
-            },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset. "
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
             }
+
           }
         }
+
+
+
+
       },
       "Asset Supplier Type": {
         "Reference_field": "asset_supplier_type",
@@ -4904,7 +4571,7 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
@@ -4924,7 +4591,7 @@
               "Condition_to_proceed": false,
               "Remark": "Asset is EV so further Checking for allowed Age of EV",
               "Exception_rule": {
-                "Reference_field": "Asset_age",
+                "Reference_field": "Asset_age_at_end_of_term",
                 "Rule_Operator": "<=",
                 "Rule_Value": "12",
                 "Field_Type": 3,
@@ -4943,7 +4610,7 @@
           "Remark": "The asset age does not meet the required age criteria. so checking for exceptions",
           "Exception_rule": {
             "Reference_field": "asset_type",
-            "Rule_Operator": "in ",
+            "Rule_Operator": "in",
             "Rule_Value": "Trucks, Trailers",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
@@ -4956,7 +4623,7 @@
                 "Flow_Exception_for_True": {
                   "Remark": "Asset is Trailers",
                   "Exception_rule": {
-                    "Reference_field": "Asset_age",
+                    "Reference_field": "Asset_age_at_end_of_term",
                     "Rule_Operator": "<=",
                     "Rule_Value": 30,
                     "Field_Type": 3,
@@ -4973,7 +4640,7 @@
                         "Flow_Exception_for_True": {
                           "Remark": "Asset is Trucks",
                           "Exception_rule": {
-                            "Reference_field": "Asset_age",
+                            "Reference_field": "Asset_age_at_end_of_term",
                             "Rule_Operator": "<=",
                             "Rule_Value": 25,
                             "Field_Type": 3,
@@ -5199,46 +4866,58 @@
         }
       },
       "Repayment Term": {
-        "Reference_field": "repayment_term_month",
-        "Rule_Operator": "<=",
-        "Rule_Value": 60,
-        "Field_Type": 3,
-        "Flow_Exception_for_True": {
-          "Condition_to_proceed": true,
-          "Remark": "The loan repayment term meets the maximum loan term requirement for the asset."
+        "Reference_field": "asset_type",
+        "Rule_Operator": "==",
+        "Rule_Value": "EVs",
+        "Field_Type": 4,
+          "logical_operator": "and",
+          "Logical_Rule": {
+            "Reference_field": "usage_type",
+            "Rule_Operator": "==",
+            "Rule_Value": "NEW",
+            "Field_Type": 4
         },
-        "Flow_Exception_for_False": {
-          "Condition_to_proceed": false,
-          "Remark": "The Asset Repayment Term condition for 60 payments has failed; now checking for the 84-month repayment term.",
-          "Exception_rule": {
+        "Flow_Exception_for_True":{
+          "Condition_to_proceed":true,
+          "Remark":"The asset meets the type and usage for the relevant asset categories.",
+          "Exception_rule":{
+            "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
             "Rule_Value": 84,
             "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
+            },
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
+            }            
+          }        
+        },
+        "Flow_Exception_for_False":{
+          "Condition_to_proceed":false,
+          "Remark":"The asset fails to meet the type and usage for its relevant asset categories.",
+          "Exception_rule":{
             "Reference_field": "repayment_term_month",
-            "logical_operator": "and",
-            "Logical_Rule": {
-              "Rule_Operator": "==",
-              "Rule_Value": "EV",
-              "Field_Type": 4,
-              "Reference_field": "asset_type",
-              "logical_operator": "and",
-              "Logical_Rule": {
-                "Reference_field": "usage_type",
-                "Rule_Operator": "==",
-                "Rule_Value": "NEW",
-                "Field_Type": 4
-              }
+            "Rule_Operator": "<=",
+            "Rule_Value": 60,
+            "Field_Type": 3,
+            "Flow_Exception_for_True":{
+              "Condition_to_proceed":true,
+              "Remark":"The loan repayment term meets the maximum loan term requirement for the asset."
             },
-            "Flow_Exception_for_True": {
-              "Condition_to_proceed": true,
-              "Remark": "The loan repayment term meets the maximum loan term requirement for the asset. "
-            },
-            "Flow_Exception_for_False": {
-              "Condition_to_proceed": false,
-              "Remark": "The loan repayment term does not meet the maximum loan term requirement for the asset. "
+            "Flow_Exception_for_False":{
+              "Condition_to_proceed":false,
+              "Remark":"The loan repayment term does not meet the maximum loan term requirement for the asset."
             }
+
           }
         }
+
+
+
+
       },
       "Asset Supplier Type": {
         "Reference_field": "asset_supplier_type",
@@ -5281,59 +4960,58 @@
         }
       },
       "Max Age of Asset": {
-          "Reference_field": "Asset_age",
-          "Rule_Operator": "<=",
-          "Rule_Value": 20,
-          "Field_Type": 3,
-          "Flow_Exception_for_True": {
-            "Condition_to_proceed": true,
-            "Remark": "The asset age meets the required age criteria."
-          },
-          "Flow_Exception_for_False": {
-            "Condition_to_proceed": false,
-            "Remark": "The asset age does not meet the required age criteria. so checking for exceptions",
-            "Exception_rule": {
-              "Reference_field": "asset_type",
-              "Rule_Operator": "in ",
-              "Rule_Value": "Trucks, Trailers",
-              "Field_Type": 4,
-              "Flow_Exception_for_True": {
-                "Remark": "The asset age meets the required age criteria.",
-                "Exception_rule": {
-                  "Reference_field": "asset_type",
-                  "Rule_Operator": "==",
-                  "Rule_Value": "Trailers",
-                  "Field_Type": 4,
-                  "Flow_Exception_for_True": {
-                    "Remark": "Asset is Trailers",
-                    "Exception_rule": {
-                      "Reference_field": "Asset_age",
-                      "Rule_Operator": "<=",
-                      "Rule_Value": 31,
-                      "Field_Type": 3,
-                      "Flow_Exception_for_True": {
-                        "Remark": "Asset is Trailer and Asset Age is less then Allowed Age 31"
-                      },
-                      "Flow_Exception_for_False": {
-                        "Remark": "Asset is Trailer and Asset Age is greater then Allowed Age 31",
-                        "Exception_rule": {
-                          "Reference_field": "asset_type",
-                          "Rule_Operator": "==",
-                          "Rule_Value": "Trucks",
-                          "Field_Type": 4,
-                          "Flow_Exception_for_True": {
-                            "Remark": "Asset is Trucks",
-                            "Exception_rule": {
-                              "Reference_field": "Asset_age",
-                              "Rule_Operator": "<=",
-                              "Rule_Value": "25",
-                              "Field_Type": 3,
-                              "Flow_Exception_for_True": {
-                                "Remark": "Asset is Truck and Asset Age is less then Allowed Age 25"
-                              },
-                              "Flow_Exception_for_False": {
-                                "Remark": "Asset is Truck and Asset Age is greater then Allowed Age 25"
-                              }
+        "Reference_field": "Asset_age_at_end_of_term",
+        "Rule_Operator": "<=",
+        "Rule_Value": 20,
+        "Field_Type": 3,
+        "Flow_Exception_for_True": {
+          "Condition_to_proceed": true,
+          "Remark": "The asset age meets the required age criteria."
+        },
+        "Flow_Exception_for_False": {
+          "Condition_to_proceed": false,
+          "Remark": "The asset age does not meet the required age criteria. so checking for exceptions",
+          "Exception_rule": {
+            "Reference_field": "asset_type",
+            "Rule_Operator": "in ",
+            "Rule_Value": "Trucks, Trailers",
+            "Field_Type": 4,
+            "Flow_Exception_for_True": {
+              "Remark": "The asset age meets the required age criteria.",
+              "Exception_rule": {
+                "Reference_field": "asset_type",
+                "Rule_Operator": "==",
+                "Rule_Value": "Trailers",
+                "Field_Type": 4,
+                "Flow_Exception_for_True": {
+                  "Remark": "Asset is Trailers",
+                  "Exception_rule": {
+                    "Reference_field": "Asset_age_at_end_of_term",
+                    "Rule_Operator": "<=",
+                    "Rule_Value": 31,
+                    "Field_Type": 3,
+                    "Flow_Exception_for_True": {
+                      "Remark": "Asset is Trailer and Asset Age is less then Allowed Age 31"
+                    },
+                    "Flow_Exception_for_False": {
+                      "Remark": "Asset is Trailer and Asset Age is greater then Allowed Age 31",
+                      "Exception_rule": {
+                        "Reference_field": "asset_type",
+                        "Rule_Operator": "==",
+                        "Rule_Value": "Trucks",
+                        "Field_Type": 4,
+                        "Flow_Exception_for_True": {
+                          "Remark": "Asset is Trucks",
+                          "Exception_rule": {
+                            "Reference_field": "Asset_age_at_end_of_term",
+                            "Rule_Operator": "<=",
+                            "Rule_Value": 25,
+                            "Field_Type": 3,
+                            "Flow_Exception_for_True": {
+                              "Remark": "Asset is Truck and Asset Age is less then Allowed Age 25"
+                            },
+                            "Flow_Exception_for_False": {
+                              "Remark": "Asset is Truck and Asset Age is greater then Allowed Age 25"
                             }
                           }
                         }
@@ -5341,12 +5019,13 @@
                     }
                   }
                 }
-              },
-              "Flow_Exception_for_False": {
-                "Remark": "The asset does not belongs to exception list."
               }
+            },
+            "Flow_Exception_for_False": {
+              "Remark": "The asset does not belongs to exception list."
             }
           }
+        }
       },
       "Used Asset": {
         "Reference_field": "usage_type",
@@ -5566,17 +5245,17 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
-        "Flow_Exception_for_True":{
-          "Condition_to_proceed":true,
-          "Remark":"The asset age meets the required age criteria."
+        "Flow_Exception_for_True": {
+          "Condition_to_proceed": true,
+          "Remark": "The asset age meets the required age criteria."
         },
-        "Flow_Exception_for_False":{
-          "Condition_to_proceed":false,
-          "Remark":"The asset age does not meet the required age criteria."
+        "Flow_Exception_for_False": {
+          "Condition_to_proceed": false,
+          "Remark": "The asset age does not meet the required age criteria."
         }
       },
       "Used Asset": {
@@ -5797,17 +5476,17 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
-        "Flow_Exception_for_True":{
-          "Condition_to_proceed":true,
-          "Remark":"The asset age meets the required age criteria."
+        "Flow_Exception_for_True": {
+          "Condition_to_proceed": true,
+          "Remark": "The asset age meets the required age criteria."
         },
-        "Flow_Exception_for_False":{
-          "Condition_to_proceed":false,
-          "Remark":"The asset age does not meet the required age criteria."
+        "Flow_Exception_for_False": {
+          "Condition_to_proceed": false,
+          "Remark": "The asset age does not meet the required age criteria."
         }
       },
       "Used Asset": {
@@ -6040,17 +5719,17 @@
         }
       },
       "Max Age of Asset": {
-        "Reference_field": "Asset_age",
+        "Reference_field": "Asset_age_at_end_of_term",
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
-        "Flow_Exception_for_True":{
-          "Condition_to_proceed":true,
-          "Remark":"The asset age meets the required age criteria."
+        "Flow_Exception_for_True": {
+          "Condition_to_proceed": true,
+          "Remark": "The asset age meets the required age criteria."
         },
-        "Flow_Exception_for_False":{
-          "Condition_to_proceed":false,
-          "Remark":"The asset age does not meet the required age criteria."
+        "Flow_Exception_for_False": {
+          "Condition_to_proceed": false,
+          "Remark": "The asset age does not meet the required age criteria."
         }
       },
       "Used Asset": {
@@ -6287,13 +5966,13 @@
         "Rule_Operator": "<=",
         "Rule_Value": 20,
         "Field_Type": 3,
-        "Flow_Exception_for_True":{
-          "Condition_to_proceed":true,
-          "Remark":"The asset age meets the required age criteria."
+        "Flow_Exception_for_True": {
+          "Condition_to_proceed": true,
+          "Remark": "The asset age meets the required age criteria."
         },
-        "Flow_Exception_for_False":{
-          "Condition_to_proceed":false,
-          "Remark":"The asset age does not meet the required age criteria."
+        "Flow_Exception_for_False": {
+          "Condition_to_proceed": false,
+          "Remark": "The asset age does not meet the required age criteria."
         }
       },
       "Used Asset": {

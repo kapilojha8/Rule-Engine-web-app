@@ -26,9 +26,9 @@ class Rule:
                 Flow_for_False (bool): Flag indicating whether to continue flow if the rule evaluates to False.
         """
         self.ID = ID
-        self.Rule_header = Rule_header
+        self.Rule_header = Rule_header.strip()
         self.Rule_value = self.convert_value(Rule_value, Field_Type)
-        self.Rule_operator = Rule_operator
+        self.Rule_operator = Rule_operator.strip()
         self.logical_operator = logical_operator  # Can be 'and' or 'or'
         self.Logical_Rule = Logical_Rule
         self.Flow_Exception_for_True = Flow_exception_True
@@ -64,8 +64,6 @@ class Rule:
             return f"{self.Rule_header}"
         if self.logical_operator and self.Logical_Rule:
             return f"({self.Rule_header} {self.Rule_operator} {str(self.Rule_value)} {self.logical_operator} {str(self.Logical_Rule)})"
-        if not self.Is_Nested:
-            return f"{self.Rule_header} {self.Rule_operator} {str(self.Rule_value)}"
         if self.Rule_value!=None and self.Rule_operator!=None and self.Rule_value!=None:
             return f"{self.Rule_header} {self.Rule_operator} {str(self.Rule_value)}"
 
@@ -79,7 +77,6 @@ class Rule:
             Returns:
                 bool: The result of the rule evaluation (True or False).
         """
-
         nested_remark = ""
         if self.Rule_header not in data:
             raise ValueError(f"Header {self.Rule_header} not found in data.")
