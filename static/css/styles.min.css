@@ -114,9 +114,6 @@ input[type="number"] {
 
 }
 
-.form_box .right {
-   padding-left: 16px;
-}
 .submit_btn_spinner{
     margin: auto;
 }
@@ -166,3 +163,6 @@ input[type="number"] {
     box-shadow: none;
     border:none
   }
+  .accordion button.accordion-button img {
+    width: 160px;
+}

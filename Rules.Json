@@ -16,14 +16,14 @@
         "Reference_field": "asset_type",
         "Rule_Operator": "in",
         "Field_Type": 4,
-        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  Trailers and buses/coaches,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
+        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  TRAILERS, BUSES AND COACHES,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
           "Remark": "The asset qualifies for the applicable asset categories."
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -108,7 +108,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -126,7 +126,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -247,7 +247,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -273,7 +273,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -308,14 +308,14 @@
         "Reference_field": "asset_type",
         "Rule_Operator": "in",
         "Field_Type": 4,
-        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  Trailers and buses/coaches,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
+        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  TRAILERS, BUSES AND COACHES,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
           "Remark": "The asset qualifies for the applicable asset categories."
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -400,7 +400,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -418,7 +418,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -539,7 +539,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -565,7 +565,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -600,14 +600,14 @@
         "Reference_field": "asset_type",
         "Rule_Operator": "in",
         "Field_Type": 4,
-        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  Trailers and buses/coaches,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
+        "Rule_Value": "Agricultural machinery and equipment, Materials handling/forklifts, Access equipment (boom/scissor lifts), Light trucks <3.5 tonnes, Heavy trucks >3.5 tonnes,  TRAILERS, BUSES AND COACHES,  Commercial Motor_Vehicles (utes, vans and 4WDs), Construction and earth moving equipment (non-mining)",
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
           "Remark": "The asset qualifies for the applicable asset categories."
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -692,7 +692,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -710,7 +710,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -831,7 +831,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -857,7 +857,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -972,7 +972,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -990,7 +990,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1062,7 +1062,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -1088,7 +1088,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -1203,7 +1203,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1221,7 +1221,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1293,7 +1293,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -1319,7 +1319,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -1434,7 +1434,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1452,7 +1452,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1524,7 +1524,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -1550,7 +1550,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -1592,7 +1592,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -1677,7 +1677,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1695,7 +1695,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1783,7 +1783,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -1809,7 +1809,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -1851,7 +1851,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -1936,7 +1936,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -1954,7 +1954,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -2040,7 +2040,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -2066,7 +2066,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -2108,7 +2108,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -2195,7 +2195,7 @@
         "Field_Type": 3,
         "Flow_Exception_for_True":{
           "Condition_to_proceed":true,
-          "Remark":"The asset meets the age (less than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( greater than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -2213,7 +2213,7 @@
         },
         "Flow_Exception_for_False":{
           "Condition_to_proceed":false,
-          "Remark":"The asset meets the age (greater than 3) requirement for its class.",
+          "Remark":"The asset meets the age ( less than 3 ) requirement for its class.",
           "Exception_rule":{
             "Reference_field": "repayment_term_month",
             "Rule_Operator": "<=",
@@ -2299,7 +2299,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -2325,7 +2325,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -2367,7 +2367,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -2428,7 +2428,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "Caravans, Camper Vans & Motorhomes, atv, offroad bikes and other goods, Motorbike",
+            "Rule_Value": "Caravans, Camper Vans & Motorhomes, atv, offroad bikes and other goods, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -2444,7 +2444,7 @@
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
-                  "Remark": "The asset qualifies in the exception list of assets.",
+                  "Remark": "The asset qualifies in the  list of assets (Caravans, Camper Vans & Motorhomes)",
                   "Exception_rule": {
                     "Reference_field": "amount_financed",
                     "Rule_Operator": "<=",
@@ -2460,15 +2460,15 @@
                 },
                 "Flow_Exception_for_False": {
                   "Condition_to_proceed": false,
-                  "Remark": "The asset does not belong to exception list of asset.",
+                  "Remark": "The asset does not belong to exception list of asset (Caravans, Camper Vans & Motorhomes).",
                   "Exception_rule": {
                     "Reference_field": "asset_type",
                     "Rule_Operator": "==",
-                    "Rule_Value": "Motorbike",
+                    "Rule_Value": "MOTORBIKES",
                     "Field_Type": 4,
                     "Flow_Exception_for_True": {
                       "Condition_to_proceed": true,
-                      "Remark": "The asset qualifies in the exception list of assets.",
+                      "Remark": "The asset qualifies in the exception list of assets (MOTORBIKES).",
                       "Exception_rule": {
                         "Reference_field": "amount_financed",
                         "Rule_Operator": "<=",
@@ -2672,7 +2672,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -2698,7 +2698,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -2740,7 +2740,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -2801,7 +2801,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "Caravans, Camper Vans & Motorhomes, atv, offroad bikes and other goods, Motorbike",
+            "Rule_Value": "Caravans, Camper Vans & Motorhomes, atv, offroad bikes and other goods, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -2837,7 +2837,7 @@
                   "Exception_rule": {
                     "Reference_field": "asset_type",
                     "Rule_Operator": "==",
-                    "Rule_Value": "Motorbike",
+                    "Rule_Value": "MOTORBIKES",
                     "Field_Type": 4,
                     "Flow_Exception_for_True": {
                       "Condition_to_proceed": true,
@@ -3045,7 +3045,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -3071,7 +3071,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -3113,7 +3113,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -3328,7 +3328,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -3354,7 +3354,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -3571,7 +3571,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -3597,7 +3597,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -3814,7 +3814,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -3840,7 +3840,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -4059,7 +4059,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -4085,7 +4085,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -4304,7 +4304,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -4330,7 +4330,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -4364,7 +4364,7 @@
       "Asset Type": {
         "Reference_field": "asset_type",
         "Rule_Operator": "in",
-        "Rule_Value": "Motor_Vehicles, Passenger vehicles, Light trucks, Light commercial vehicles (van, utes), Classic cars (loadings apply), Motorbikes, Primary_Assets, Heavy trucks >4.5T GVM, Trailers, Buses and coaches, Small yellow goods and excavators, Construction and earth moving equipment, Farming and agriculture, Materials handling and access equipment, Prime movers (loadings apply), Caravans",
+        "Rule_Value": "Motor_Vehicles, Passenger vehicles, Light trucks, Light commercial vehicles (van, utes), Classic cars (loadings apply), MOTORBIKES, Primary_Assets, Heavy trucks >4.5T GVM, Trailers, Buses and coaches, Small yellow goods and excavators, Construction and earth moving equipment, Farming and agriculture, Materials handling and access equipment, Prime movers (loadings apply), Caravans",
         "Field_Type": 4,
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
@@ -4372,7 +4372,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -4433,7 +4433,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -4693,7 +4693,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -4719,7 +4719,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -4753,7 +4753,7 @@
       "Asset Type": {
         "Reference_field": "asset_type",
         "Rule_Operator": "in",
-        "Rule_Value": "Motor_Vehicles, Passenger vehicles, Light trucks, Light commercial vehicles (van, utes), Classic cars (loadings apply), Motorbikes, Primary_Assets, Heavy trucks >4.5T GVM, Trailers, Buses and coaches, Small yellow goods and excavators, Construction and earth moving equipment, Farming and agriculture, Materials handling and access equipment, Prime movers (loadings apply), Caravans",
+        "Rule_Value": "Motor_Vehicles, Passenger vehicles, Light trucks, Light commercial vehicles (van, utes), Classic cars (loadings apply), MOTORBIKES, Primary_Assets, Heavy trucks >4.5T GVM, Trailers, Buses and coaches, Small yellow goods and excavators, Construction and earth moving equipment, Farming and agriculture, Materials handling and access equipment, Prime movers (loadings apply), Caravans",
         "Field_Type": 4,
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
@@ -4761,7 +4761,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -4779,7 +4779,7 @@
       "ABN Registration": {
         "Reference_field": "ABN_in_Months",
         "Rule_Operator": ">=",
-        "Rule_Value": 60,
+        "Rule_Value": 12,
         "Field_Type": 3,
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
@@ -4793,7 +4793,7 @@
       "GST Registration": {
         "Reference_field": "GST_in_Months",
         "Rule_Operator": ">",
-        "Rule_Value": 36,
+        "Rule_Value": 12,
         "Field_Type": 3,
         "Flow_Exception_for_True": {
           "Condition_to_proceed": true,
@@ -4822,7 +4822,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -4943,7 +4943,7 @@
           "Remark": "The borrower meets the property criteria for the relevant asset categories."
         },
         "Flow_Exception_for_False": {
-          "Condition_to_proceed": true,
+          "Condition_to_proceed": false,
           "Remark": "The borrower does not meet the property criteria for the relevant asset.",
           "Exception_rule": {
             "Rule_Operator": "<=",
@@ -5056,7 +5056,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -5082,7 +5082,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -5287,7 +5287,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -5313,7 +5313,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -5518,7 +5518,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -5544,7 +5544,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -5586,7 +5586,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -5761,7 +5761,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -5787,7 +5787,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,
@@ -5829,7 +5829,7 @@
         },
         "Flow_Exception_for_False": {
           "Condition_to_proceed": false,
-          "Remark": "The asset does not qualify for any relevant excluded asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
+          "Remark": "The asset does not qualify for any relevant asset categories. Therefore, it will be considered with the benefit of doubt for further assessment.",
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
@@ -6004,7 +6004,7 @@
           "Exception_rule": {
             "Reference_field": "asset_type",
             "Rule_Operator": "not in",
-            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+            "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
             "Field_Type": 4,
             "Flow_Exception_for_True": {
               "Condition_to_proceed": true,
@@ -6030,7 +6030,7 @@
               "Exception_rule": {
                 "Reference_field": "asset_type",
                 "Rule_Operator": "in",
-                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS AND BUSES/COACHES, PASSENGER CARS, SUVS",
+                "Rule_Value": "MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS >4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS <3.5 TONNES, HEAVY TRUCKS >3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES",
                 "Field_Type": 4,
                 "Flow_Exception_for_True": {
                   "Condition_to_proceed": true,

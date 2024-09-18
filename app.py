@@ -1,9 +1,6 @@
 # using flask_restful
 from flask import Flask, jsonify, request
-import json
-import mysql.connector
 import pandas as pd
-from flask_ngrok import run_with_ngrok
 from flask import  render_template
 
 #for rule Engine 
@@ -19,7 +16,6 @@ import secrets
 # creating the flask app
 app = Flask(__name__)
 app.static_folder = 'static'
-run_with_ngrok(app)
 
 class Rule_Engine:
 

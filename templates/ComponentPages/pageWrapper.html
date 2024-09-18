@@ -180,24 +180,37 @@
                     var collap = "collapsed"
                     var aria_expanded = "true"
                     $('#loader').hide()
+                
+
                     lenderNames.forEach(lendername=>{
                         var lenders = Object.keys(response[lendername])
-                        lendercolor = "#eb3359"
+                        lendercolor = ["rgba(255,255,255,1)","rgba(5,221,128,1)"] // "#eb3359"
                         lenderTextcolor ="#ffffff"
                         lenders.forEach(lender => {
                             if(response[lendername][lender]['Eligibility'] == true){
-                                lendercolor = "#05dd80 !important";
+                                lendercolor =  ["rgba(255, 255, 255, 1)","rgba(235, 51, 89, 1)"];
                                 lenderTextcolor = "#212529"
                             }
                         })
-                            
+                        let path
+                        if(lendername == "Flexi"){
+                            path = "{{ url_for('static', filename='images/Flexi.png') }}"
+                        }
+                        else if(lendername == "Resimac"){
+                            path =  "{{ url_for('static', filename='images/Resimac.png') }}"
+                        }
+                        else{
+                            path = "{{ url_for('static', filename='images/Pepper.svg') }}"
+
+                        }
+                             
                         const headers = ['Asset Type','ABN Registration','GST Registration','Loan Amount','Applicant Entity Type','Repayment Term','Asset Supplier Type','Max Loan for Non Property Owners','Used Asset','Max Age of Asset','Deposit for non-property owner'];
                         // Construct table HTML for Pass and Fail results
                          tableHtml += `
                         <div class="accordion-item">
                       <h2 class="accordion-header" id="heading${lendername}">
-                        <button style="background-color: ${lendercolor}; color:${lenderTextcolor}" class="accordion-button ${collap}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${lendername}" aria-expanded=${aria_expanded} aria-controls="collapse${lendername}">
-                          ${lendername}
+                        <button style="background:  linear-gradient(90deg, ${lendercolor[0]}  15%, ${lendercolor[1]} 100%); color:${lenderTextcolor}" class="accordion-button ${collap}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${lendername}" aria-expanded=${aria_expanded} aria-controls="collapse${lendername}">
+                         <img src = ${path}>
                         </button>
                       </h2>
                       <div id="collapse${lendername}" class="accordion-collapse collapse" aria-labelledby="heading${lendername}" data-bs-parent="#accordionExample">
