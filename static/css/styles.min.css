@@ -164,5 +164,6 @@ input[type="number"] {
     border:none
   }
   .accordion button.accordion-button img {
-    width: 160px;
+    width: 167px;
+    height: 24px;
 }

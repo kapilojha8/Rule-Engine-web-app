@@ -184,11 +184,11 @@
 
                     lenderNames.forEach(lendername=>{
                         var lenders = Object.keys(response[lendername])
-                        lendercolor = ["rgba(255,255,255,1)","rgba(5,221,128,1)"] // "#eb3359"
+                        lendercolor = ["rgba(255,255,255,1)","rgba(235, 51, 89, 1)"] // "#eb3359"
                         lenderTextcolor ="#ffffff"
                         lenders.forEach(lender => {
                             if(response[lendername][lender]['Eligibility'] == true){
-                                lendercolor =  ["rgba(255, 255, 255, 1)","rgba(235, 51, 89, 1)"];
+                                lendercolor =  ["rgba(255, 255, 255, 1)","rgba(5,221,128,1)"];
                                 lenderTextcolor = "#212529"
                             }
                         })
@@ -200,7 +200,7 @@
                             path =  "{{ url_for('static', filename='images/Resimac.png') }}"
                         }
                         else{
-                            path = "{{ url_for('static', filename='images/Pepper.svg') }}"
+                            path = "{{ url_for('static', filename='images/Pepper.png') }}"
 
                         }
                              
@@ -209,7 +209,7 @@
                          tableHtml += `
                         <div class="accordion-item">
                       <h2 class="accordion-header" id="heading${lendername}">
-                        <button style="background:  linear-gradient(90deg, ${lendercolor[0]}  15%, ${lendercolor[1]} 100%); color:${lenderTextcolor}" class="accordion-button ${collap}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${lendername}" aria-expanded=${aria_expanded} aria-controls="collapse${lendername}">
+                        <button style="background:  linear-gradient(15deg, ${lendercolor[0]}  1%, ${lendercolor[1]} 100%); color:${lenderTextcolor}" class="accordion-button ${collap}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${lendername}" aria-expanded=${aria_expanded} aria-controls="collapse${lendername}">
                          <img src = ${path}>
                         </button>
                       </h2>
@@ -229,9 +229,9 @@
                             if (Object.keys(response[lendername][lender]).length === 0) {
                                 return; // Skip this iteration by returning from the callback
                             }
-                            var tick = '<span class = "cross">&#10005;</span>';
+                            var tick = '<span class = "cross" style="color:#ffff">&#10005;</span>';
                             if (response[lendername][lender]['Eligibility'] == true){
-                                tick = '<span class="tick">&#10003;</span>'
+                                tick = '<span class="tick" style="color:#ffff">&#10003;</span>'
                             }
                             tableHtml += `<th>${lender} ${tick}</th>`;
                         });
@@ -269,14 +269,14 @@
                                             
                                             console.log("----->",lender)
                                             if (response[lendername][lender][header]['RC_Result'] == true) {
-                                                if ((response[lendername][lender][header]['Remark'].toLowerCase()).includes("doubt")) {
-                                                    color = "orange";
-                                                } else {
-                                                    color = "#05dd80 !important";
-                                                }
+                                                color = "#05dd80 !important";
                                                 textcolor = "#212529";
                                             } else {
                                                 color = "#eb3359";
+                                                textcolor = "#ffffff";
+                                            }
+                                            if ((response[lendername][lender][header]['Remark'].toLowerCase()).includes("doubt")) {
+                                                color = "#d09f47";
                                                 textcolor = "#ffffff";
                                             }
                                             let remarkHtml = ``;
