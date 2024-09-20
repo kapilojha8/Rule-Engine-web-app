@@ -23,6 +23,11 @@ class PreprocessingOfData:
             self.create_asset_classification()
             self.create_Deposit_Amount_Percentage()
     
+    def Asset_category_classification(self, Asset, Lender_name, Asset_category):
+        if Asset.upper() in [category.upper().strip() for category in self.asset_categories[Lender_name][Asset_category].split(",")]:
+            return True
+        return False
+
     def create_asset_categories(self):
         with open('static/data.json', 'r') as file:
                 self.asset_categories = json.load(file)
@@ -32,7 +37,7 @@ class PreprocessingOfData:
                 return "PRIMARY_ASSETS"
             elif asset_upper in self.asset_categories["Secondary"]:
                 return "SECONDARY_ASSETS"
-            elif asset_upper in self.asset_categories["Tertiory"]:
+            elif asset_upper in self.asset_categories["Tertiary"]:
                 return "TERTIARY_ASSETS"
             else:
                 return "Unknown"

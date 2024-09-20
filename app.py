@@ -13,6 +13,11 @@ from datetime import datetime
 from preprocessing_of_data import PreprocessingOfData
 import secrets
 
+LenderRules = {
+    "Flexi"  : [ 'Primary Flexi_up_to_20K', 'Primary Flexi_from_20_50K', 'Primary Flexi_50_300K', 'Secondary Flexi_upto_20K',  'Secondary Flexi_from_20_50K', 'Secondary Flexi_50_300K', 'Tertiary Flexi_upto_20K', 'Tertiary Flexi_from_20_50K',  'Tertiary Flexi_50_300K'],
+    "Pepper"  : ['Primary Pepper_Tier_A', 'Primary Pepper_Tier_B', 'Primary Pepper_Tier_C',  'Secondary Pepper_Tier_A',  'Secondary Pepper_Tier_B', 'Tertiary Pepper_Tier_A', 'Tertiary Pepper_Tier_B'],
+    "Resimac" : [ 'Primary Resimac- light doc', 'Primary Resimac- low doc',  'Secondary Resimac- low doc',  'Secondary Resimac- light doc', 'Tertiary Resimac- light doc',  'Tertiary Resimac- low doc']
+}
 # creating the flask app
 app = Flask(__name__)
 app.static_folder = 'static'
@@ -75,19 +80,23 @@ class Rule_Engine:
         Rules_by_Lender  = Rules_using_JSON('Rules.json')
         Rules_by_Lender.Create_rules_using_json()
         Remarks = Rules_by_Lender.Remarks
-        
-
         for Data_rule in Data_of_Rule_test:
-            print("The Data Rule is ",Data_rule)
 
             #Dictionary which will be jsonify for the User Interface
             TempDict = {"Flexi":{},'Pepper':{},"Resimac":{}} 
 
             for LenderName,LenderRule in Rules_by_Lender.lender_rules.items():
-                
-                #Checking only for the specific asset category
-                if LenderName.upper().find(Data_rule['asset_category'].split("_")[0]) == -1:
+                LendrName = ""
+                for Key,Val in LenderRules.items():
+                    if LenderName.upper().find(Key.upper()) != -1:
+                        if LenderName in Val:
+                            LendrName = Key
+
+                if not Preprocessed_data.Asset_category_classification(Data_rule['asset_type'], LendrName, LenderName.split(" ")[0]):
                     continue
+                #Checking only for the specific asset category
+                # if LenderName.upper().find(Data_rule['asset_category'].split("_")[0]) == -1:
+                #     continue
                 
                 #Giving requried Json format to dictionary  
                 # Example { "Pepper": { "Primary Pepper_Tier_A" : { rule : {rule result : true , remark : "reason for true or false" }, eligibility : true}} }
@@ -121,13 +130,10 @@ class Rule_Engine:
                 if temppte == None:
                     TempDict[lender][LenderName]['Eligibility'] = True
                     # Data_rule['Evaluated_Lender'] = LenderName
-          
                 
                 else:
                     TempDict[lender][LenderName]['Eligibility'] = False
                     # Data_rule['Evaluated_Lender'] = "No Lender Found!"
-      
-    
 
 
         
