@@ -9,7 +9,7 @@ class Flow_exception:
         return f"Exception Rule : {self.Exception_rule} || Condition to proceed : {self.Condition_to_proceed} || Remark : {self.Remark}"
 
 class Rule:
-    def __init__(self, ID:str, Rule_header:str,Rule_operator:str, Rule_value, Field_Type:int, Flow_exception_True:Flow_exception,Flow_exception_False:Flow_exception, logical_operator:str=None,Logical_Rule=None):
+    def __init__(self, ID:str, Rule_header:str,Rule_operator:str, Rule_value, Field_Type:int, Flow_exception_True:Flow_exception,Flow_exception_False:Flow_exception, logical_operator:str=None,Logical_Rule=None, Is_Evaluating:bool=True):
         """
             Initializes a Rule object with the provided attributes.
 
@@ -31,6 +31,7 @@ class Rule:
         self.Rule_operator = Rule_operator.strip()
         self.logical_operator = logical_operator  # Can be 'and' or 'or'
         self.Logical_Rule = Logical_Rule
+        self.Is_Evaluating = Is_Evaluating
         self.Flow_Exception_for_True = Flow_exception_True
         self.Flow_Exception_for_False = Flow_exception_False
         self.Evaluated_result = None

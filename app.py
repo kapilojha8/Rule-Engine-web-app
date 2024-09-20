@@ -109,7 +109,10 @@ class Rule_Engine:
                     Running_logs = Running_logs + " -- " + Rule_evaluate['Remark']  if Running_logs!="" else Rule_evaluate['Remark']
                     TempDict[lender][LenderName][ temppte.RC_ID] = {}
                     EATD = temppte.take_decisions(temppte.Rule)
-                    TempDict[lender][LenderName][temppte.RC_ID]["RC_Result"] = Rule_evaluate['Return_result']   # Rule Condition Result
+                    if temppte.Rule.Is_Evaluating:
+                        TempDict[lender][LenderName][temppte.RC_ID]["RC_Result"] = Rule_evaluate['Return_result']   # Rule Condition Result
+                    else:
+                        TempDict[lender][LenderName][temppte.RC_ID]["RC_Result"] = True
                     TempDict[lender][LenderName][temppte.RC_ID]["Remark"] = Rule_evaluate['Remark']
                     if not EATD :
                         break

@@ -49,7 +49,8 @@ def Logical_OR_NestedRule(rule_var, rule_key="",parent_rule_heading=""):
                 Rule_header    =  rule_var['Reference_field'],
                 Rule_operator  =  rule_var['Rule_Operator'],
                 Rule_value     =  rule_var['Rule_Value'],
-                Field_Type     =  rule_var.get('Field_Type'),            
+                Field_Type     =  rule_var.get('Field_Type'),     
+                Is_Evaluating  = rule_var.get('Is_Evaluating', True),       
                 Flow_exception_True = Flow_exception(
                    Exception_rule =  Logical_OR_NestedRule(Flow_exception_True_Flow_rule) if Flow_exception_True_Flow_rule else None,
                    Condition_to_proceed =  Flow_exception_True_Condition_to_proceed if Flow_exception_True_Condition_to_proceed else False,
