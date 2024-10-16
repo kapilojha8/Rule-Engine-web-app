@@ -2,7 +2,6 @@ from lxml import etree
 
 class XMl_validator:
     def __init__(self,XML_File_path, XSD_File_path):
-        print()
         self.XML_File_path = XML_File_path
         self.XSD_File_path = XSD_File_path
         self.load_xml_Xsd_using_path()

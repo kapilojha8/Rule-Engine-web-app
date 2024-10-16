@@ -113,8 +113,6 @@ class Rule:
         elif self.Rule_operator == "<":
             result = actual_value < self.Rule_value
         elif self.Rule_operator == ">=":
-            if self.Rule_header == "Deposit_Amount_percentage":
-                print(self.Rule_header , " Actual Value ",actual_value, ' self Value ', self.Rule_value)
             result = actual_value >= self.Rule_value
         elif self.Rule_operator == "<=":
             result = actual_value <= self.Rule_value

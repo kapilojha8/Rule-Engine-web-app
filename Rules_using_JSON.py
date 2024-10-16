@@ -1,4 +1,4 @@
-from Rule_model import Rule, Rule_Connection, Flow_exception
+from Models.Rule_model import Rule, Rule_Connection, Flow_exception
 import json
 
 """
