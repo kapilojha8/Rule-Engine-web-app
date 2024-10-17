@@ -2,8 +2,19 @@ from Rules_using_XML import Rule_using_XML
 from flask.views import MethodView
 from flask import request
 from preprocessing_of_data import PreprocessingOfData
+import pandas as pd
 
-
+def cast_value(value):
+    try:
+        # Try converting to integer
+        return int(value)
+    except ValueError:
+        try:
+            # If not integer, try converting to float
+            return float(value)
+        except ValueError:
+            # If neither, return as string or handle special cases like dates
+            return value
 
 
 
@@ -64,8 +75,17 @@ class Rule_Engine_XML_Controller(MethodView):
         if request.method == "POST":
             # Extract the data from the request and preprocess it for rule evaluation
             data_from_client = request.json['body']
-            data_from_client = {key: [val] for key, val in data_from_client.items()}  # Convert to dictionary format
+            # data_from_client = {key: [val] for key, val in data_from_client.items()}  # Convert to dictionary format
             
+            # Cast each field's first element to the correct type
+            for key, value in data_from_client.items():
+                if key.endswith('date'):  # Check for date fields to convert to datetime
+                    data_from_client[key] = [value] # pd.to_datetime(value[0])
+                elif key == 'Primary__c' or key == 'usage_type':  # Handle boolean-like fields
+                    data_from_client[key] = [value]
+                else:
+                    data_from_client[key] = [cast_value(value)]
+
             # Preprocess the client data for rule testing
             Preprocessed_data = PreprocessingOfData(data_from_client)
             Preprocessed_data.converting_df_to_dict()  # Convert DataFrame to dictionary
