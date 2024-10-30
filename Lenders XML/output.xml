@@ -73,7 +73,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -166,7 +166,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -259,7 +259,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -333,7 +333,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -407,7 +407,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -481,7 +481,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -564,7 +564,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -647,7 +647,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -730,7 +730,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -859,7 +859,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -986,7 +986,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1078,7 +1078,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1156,7 +1156,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1234,7 +1234,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1311,7 +1311,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1388,7 +1388,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1523,7 +1523,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1646,7 +1646,7 @@
                   </Exception_rule>
                </Flow_for_False_eval>
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1718,7 +1718,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1790,7 +1790,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1867,7 +1867,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
@@ -1944,7 +1944,7 @@
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The asset age meets the required age criteria." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The asset age does not meet the required age criteria." />
             </Rule>
-            <Rule name="Deposit_for_non-property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
+            <Rule name="Deposit_for_non_property_owner" reference_field="guarantor_1_residential_status" rule_Operator="==" rule_Value="OWNING" field_Type="4">
                <Flow_for_True_eval Condition_to_proceed="true" Remark="The borrower meets the property criteria for the relevant asset, so deposit is not required." />
                <Flow_for_False_eval Condition_to_proceed="false" Remark="The borrower does not meet the property criteria for the relevant asset, Consequently, checking the 'Exception asset list'.">
                   <Exception_rule reference_field="asset_type" rule_Operator="not in" rule_Value="MOTOR VEHICLES, PASSENGER VEHICLES, LIGHT COMMERCIAL VEHICLES, RIGID TRUCKS, TRAILERS, BUSES, FORKLIFTS, MATERIAL HANDLING, YELLOW GOODS, EARTHMOVING EQUIPMENT, WHEELED CONSTRUCTION EQUIPMENT, AGRICULTURAL EQUIPMENT, HEAVY TRUCKS &gt;4.5T GVM, CARAVANS, COMMERCIAL MOTOR VEHICLES, UTES, VANS, 4WDS, LIGHT TRUCKS &lt;3.5 TONNES, HEAVY TRUCKS &gt;3.5 TONNES, TRAILERS, BUSES AND COACHES, PASSENGER CARS, SUVS, EVS, MOTORBIKES" field_Type="4">
