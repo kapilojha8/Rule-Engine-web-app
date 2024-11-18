@@ -1,11 +1,33 @@
 from datetime import datetime
 class Flow_exception:
+    """
+        A class to represent an exception flow in a rule-based system.
+
+        Attributes:
+        - Exception_rule (str): The rule or condition that triggered the exception.
+        - Remark (str): Additional information or comments about the exception.
+        - Condition_to_proceed (bool): Indicates if the process can proceed despite the exception. Defaults to False.
+    """
     def __init__(self,Exception_rule, Remark, Condition_to_proceed=False) -> None:
+        """
+        Initializes a Flow_exception instance.
+
+        Parameters:
+        - Exception_rule (str): The rule or condition that caused the exception.
+        - Remark (str): A remark or comment providing additional context about the exception.
+        - Condition_to_proceed (bool): A flag indicating if the process can continue. Defaults to False.
+        """
         self.Exception_rule = Exception_rule
         self.Condition_to_proceed = Condition_to_proceed
         self.Remark = Remark
 
     def __str__(self) -> str:
+        """
+            Returns a string representation of the Flow_exception instance.
+
+            Returns:
+            - str: A formatted string containing the exception details.
+        """
         return f"Exception Rule : {self.Exception_rule} || Condition to proceed : {self.Condition_to_proceed} || Remark : {self.Remark}"
 
 class Rule:
@@ -37,6 +59,15 @@ class Rule:
         self.Evaluated_result = None
 
     def convert_value(self, value, Field_Type):
+        """
+            Converts the Field value from client into the specific type provided by the Rule.
+            Parameters:
+            - value (str): The value which needs to be convered.
+            - Field_Type (str/int): The variable which decide the type of value.
+
+            Returns:
+            - The value into the converted Field type if Field_Type exits in the Rule Otherwise throw an exception.
+        """
         if Field_Type == 0 or Field_Type == '0':  # bool
             return bool(value)
         elif Field_Type == 1 or Field_Type == '1':  # date
@@ -147,7 +178,7 @@ class Rule:
                 LLO = self.Flow_Exception_for_False.Exception_rule.evaluate(data)
                 nested_remark = nested_remark+" || "+LLO['Remark'] if nested_remark != "" else LLO['Remark']
                 result = LLO['Return_result']
-        
+        # Store the evaluation result and return the result and remarks
         self.Evaluated_result = result
         return {"Return_result": result, "Remark": nested_remark }
 

@@ -24,6 +24,9 @@ class PreprocessingOfData:
             self.create_Deposit_Amount_Percentage()
     
     def Asset_category_classification(self, Asset, Lender_name, Asset_category):
+        """
+            Classifies assets into predefined categories based on a JSON configuration.
+        """
         if Asset.upper() in [category.upper().strip() for category in self.asset_categories[Lender_name][Asset_category].split(",")]:
             return True
         return False

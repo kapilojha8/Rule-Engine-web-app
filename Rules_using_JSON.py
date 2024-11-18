@@ -84,8 +84,6 @@ class Rules_using_JSON:
         self.Remarks = {}
         # Load the JSON file
 
-
-
         try:
             # Load the JSON file
             with open(JsonFile_name, 'r') as file:

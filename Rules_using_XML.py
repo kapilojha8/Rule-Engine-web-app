@@ -21,6 +21,15 @@ from datetime import datetime
 """
 
 def parse_nested_rule(Rule_element):
+    """
+            Recursively parses a nested rule element from the XML file.
+            
+            Args:
+                Rule_element (Element): XML element representing a rule.
+
+            Returns:
+                Rule: A Rule object representing the parsed rule and its associated properties.
+    """
     """Recursive function to parse nested rules in the XML."""
     # Extracting necessary attributes
     # Initialize variables for True and False flow exception handling
@@ -86,7 +95,19 @@ def  take_decisions(rule: Rule):
 
 class Rule_using_XML:
     def __init__(self, xml_file_name, xsd_file_name):
+        """
+        Initializes the Rule_XML_Approach class by validating the provided XML file against the XSD schema 
+        and parsing the XML structure to extract relevant information.
 
+        Args:
+            xml_file_name (str): The path to the XML file to be processed.
+            xsd_file_name (str): The path to the XSD file used for validation.
+
+        Attributes:
+            lender_rules (dict): A dictionary to store lender-specific rules extracted from the XML.
+            root (Element): The root element of the parsed XML tree.
+            get_credentials (ManageURLCredentials): An object to manage credentials found in the XML.
+        """
         # Initialize the Rule_XML_Approach class by loading and validating the XML file
         # Create a dictionary to store lenders and their associated rules
         xml_validator = XMl_validator(XML_File_path=xml_file_name, XSD_File_path=xsd_file_name)
